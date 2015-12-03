@@ -1,0 +1,140 @@
+/* Tab controls */
+.tabs-min {
+	background: transparent;
+	border: none;
+	height: 740px;
+}
+
+.tabs-min .ui-widget-header {
+	background: transparent;
+	border: none;
+	border-bottom: 1px solid #c0c0c0;
+	-moz-border-radius: 0px;
+	-webkit-border-radius: 0px;
+	border-radius: 0px;
+}
+
+.tabs-min .ui-tabs-nav .ui-state-default {
+	background: transparent;
+	border: none;
+}
+
+.tabs-min .ui-tabs-nav .ui-state-active {
+	background: transparent url(images/uiTabsArrow.png) no-repeat bottom center;
+	border: none;
+}
+
+.tabs-min .ui-tabs-nav .ui-state-default a {
+	color: #c0c0c0;
+}
+
+.tabs-min .ui-tabs-nav .ui-state-active a {
+	color: #459e00;
+}
+
+#subtabs1-1 {
+}
+
+#subtabs1-2 {
+}
+
+#subtabs2-1 {
+}
+
+#subtabs2-2 {
+}
+
+/* Spider webs */
+#CA_spiderweb {
+}
+
+/* Spider webs */
+#PA_spiderweb {
+}
+
+#MR_spiderweb {
+}
+
+/* Spider webs */
+#GR_spiderweb {
+}
+
+/* Spider web hovers */
+#CA_spiderwebhover,
+#PA_spiderwebhover,
+#MR_spiderwebhover,
+#GR_spiderwebhover
+{
+	position:absolute;
+	background-color:white;
+	width:300px;
+	visibility:visible;
+}
+
+/* Sliders */
+#PA_slider {
+	position: relative;
+	left: 20px;
+	top: -70px;
+	width: 480px;
+	visibility: hidden;
+}
+
+#MR_slider {
+	position: relative;
+	left: 20px;
+	top: -70px;
+	width: 480px;
+	visibility: hidden;
+}
+
+#GR_slider {
+	position: relative;
+	left: 20px;
+	top: -70px;
+	width: 480px;
+	visibility: hidden;
+}
+
+/* Slider scales */
+#PA_sliderscale,
+#MR_sliderscale,
+#GR_sliderscale
+{
+	position:relative;
+	left:20px;
+	top:-71px;
+}
+
+/* Bars */
+#CA_bars {
+	position: relative;
+	left: 0px;
+	top: -40px;
+	visibility: hidden;
+}
+
+.CA_bars_header {
+	position: relative;
+	left: 150px;
+}
+
+.CA_bars_separator {
+	height: 15px;
+}
+
+#GR_bars {
+	position: relative;
+	left: 0px;
+	top: -40px;
+	visibility: hidden;
+}
+
+.GR_bars_header {
+	position: relative;
+	left: 150px;
+}
+
+.GR_bars_separator {
+	height: 15px;
+}

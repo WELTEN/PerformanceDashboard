@@ -1,0 +1,1 @@
+Adjusted elgg file editwrapper.php to prevent rendering choice of access level.
