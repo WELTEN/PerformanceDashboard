@@ -1,4 +1,39 @@
 <?php
+
+/*
+ * Activity and performance dashboard.
+ * Monitors group member activity and performance for a number of indicators and shows the results in spider diagrams and bar charts.
+ * Copyright (C) 2015 Aad Slootmaker
+ *
+ * This program is free software; you can redistribute it and/or
+ * modify it under the terms of the GNU General Public
+ * License as published by the Free Software Foundation; either
+ * version 2 of the License, or (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+ * General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public
+ * License along with this program (/license.txt); if not,
+ * write to the Free Software Foundation, Inc.,
+ * 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
+ *
+ *
+ *     Contact information:
+ *     Open University of the Netherlands
+ *     Valkenburgerweg 177 Heerlen
+ *     PO Box 2960 6401 DL Heerlen
+ *     e-mail: aad.slootmaker@ou.nl
+ *
+ *
+ * Open Universiteit Nederland, hereby disclaims all copyright interest
+ * in the program Emergo written by
+ * Aad Slootmaker
+ *
+ */
+
 function getParams($a_params) {
 	//indicates number of activity indicator, now in [0..5]
 	$indicatorNr = $a_params['indicatorNr'];
