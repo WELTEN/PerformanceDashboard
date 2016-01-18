@@ -30,7 +30,7 @@
  *
  *
  * Open Universiteit Nederland, hereby disclaims all copyright interest
- * in the program Emergo written by
+ * in the program Activity and performance dashboard written by
  * Aad Slootmaker
  *
  */

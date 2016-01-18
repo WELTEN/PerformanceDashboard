@@ -29,7 +29,7 @@
  *
  *
  * Open Universiteit Nederland, hereby disclaims all copyright interest
- * in the program Emergo written by
+ * in the program Activity and performance dashboard written by
  * Aad Slootmaker
  *
  */
@@ -442,7 +442,7 @@ else {
 			    }
 			  }
 			  //then group all users
-			  //maak array per dimensie, per user, per interval, met aantal waarden
+			  //make array per dimension, per user, per interval, with number of values
 			  var tempArray = [];
 			  for (i = 0; i < dimensionsArr[2].length; i++) {
 			    tempArray["data" + i] = [];
@@ -507,6 +507,27 @@ else {
 			      }
 			    }
 			  }
+			  //make array to determine number of users that filled in the questionaire per interval. This array is relevant for group about the group values
+			  //that should give the mean over the users that filled in the questionnaire
+			  var number_of_users_that_filled_in = [];
+			  for (i = 0; i < numberOfMonths; i++) {
+			    number_of_users_that_filled_in[i] = 0;
+			  }
+			  //determine number of users that filled in the questionaire per interval
+			  for (x = 0; x < GR_monthly_result["userids"].length; x++) {
+			    var userGuid = GR_monthly_result["userids"][x];
+			    for (i = 0; i < MR_GR_monthly_result.length; i++) {
+			      if (MR_GR_monthly_result[i][indexGroupguid] == groupGuid && MR_GR_monthly_result[i][indexUserguid] == userGuid) {
+			        var temp = MR_GR_monthly_result[i][indexDatetime].split(' ')[0].split('-');
+			        var year = parseInt(temp[2]);
+			        var monthNr = parseInt(temp[1]);
+			        var intervalNr = 12 * (year  - startYear) + monthNr - startMonthNr;
+			        if (intervalNr >= 0 && intervalNr < numberOfMonths) {
+                      number_of_users_that_filled_in[intervalNr] ++;
+                    }
+			      }
+			    }
+			  }
 			  //fill GR data
 			  for (x = 0; x < GR_monthly_result["userids"].length; x++) {
 			    var userGuid = GR_monthly_result["userids"][x];
@@ -520,7 +541,7 @@ else {
 			          for (j = 0; j < dimensionsArr[2].length; j++) {
 			            var value = MR_GR_monthly_result[i][indexFirstMeAboutGroup + j] / 10;
 			            //first group about the group
-			            GR_monthly_result["data" + j]["user0"][intervalNr] += value / GR_monthly_result["userids"].length;
+			            GR_monthly_result["data" + j]["user0"][intervalNr] += value / number_of_users_that_filled_in[intervalNr];
 			            //then user about the group
 			            GR_monthly_result["data" + j]["user" + (x + 1)][intervalNr] = value;
 			          }
